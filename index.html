@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Política de Privacidade - OrunTV</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <style>
+    body { font-family: Inter, system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; line-height: 1.7; color: #1a1a1a; background: #fafafa; }
+    h1, h2, h3 { color: #E50914; }
+    a { color: #E50914; }
+    .container { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
+    .meta { color: #666; font-size: 0.9em; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+    ul { padding-left: 20px; }
+    code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+  </style>
+</head>
+<body>
+  <div class='container'>
+    <h1>Política de Privacidade — OrunTV</h1>
+    <p class='meta'><strong>Última atualização:</strong> 11 de setembro de 2026</p>
+    <h2>1. Controlador de Dados</h2>
+    <p><strong>OrunTV</strong> ("nós", "nosso", "o App") é um aplicativo de player de mídia desenvolvido por <strong>Caique de Oliveira Souza</strong>.</p>
+    <ul>
+      <li><strong>E-mail de contato:</strong> caiquecastaldeli3@gmail.com</li>
+      <li><strong>Website:</strong> https://github.com/caiqueDeOliveira-dev</li>
+    </ul>
+    <h2>2. Dados que Coletamos</h2>
+    <h3>2.1 Dados que Você Nos Fornece</h3>
+    <ul>
+      <li><strong>Credenciais de listas M3U/Xtream:</strong> URLs, usuários e senhas que você insere para acessar suas próprias listas de canais. Estes dados ficam <strong>apenas no seu dispositivo</strong> (armazenamento local do navegador/TV) e <strong>nunca são enviados para nossos servidores</strong>.</li>
+      <li><strong>Chave de API do TMDB:</strong> Se você configurar uma chave do The Movie Database para buscar pôsteres e sinopses, ela fica armazenada localmente no seu dispositivo.</li>
+      <li><strong>Configurações de Cast (MQTT):</strong> Endereço do broker, usuário e senha para receber conteúdo do PC via MQTT. Armazenados localmente.</li>
+      <li><strong>Credenciais Supabase (opcional):</strong> Se você fizer login para sincronizar favoritos/histórico entre dispositivos, usamos autenticação Supabase. Seu e-mail e hash de senha são gerenciados pelo Supabase (política de privacidade deles se aplica).</li>
+    </ul>
+    <h3>2.2 Dados Coletados Automaticamente</h3>
+    <ul>
+      <li><strong>Dados de uso anônimos:</strong> Telemetria básica de erros e performance (ex.: falhas de reprodução, tempo de inicialização) enviada para console local — <strong>não sai do dispositivo</strong> a menos que você configure um endpoint HTTP próprio.</li>
+      <li><strong>Identificador do dispositivo:</strong> Um ID aleatório gerado localmente para distinguir sua TV nas sincronizações (se habilitado).</li>
+    </ul>
+    <h3>2.3 Dados que NÃO Coletamos</h3>
+    <ul>
+      <li>❌ Histórico do que você assiste</li>
+      <li>❌ Listas de canais que você importa</li>
+      <li>❌ Suas credenciais de IPTV</li>
+      <li>❌ Localização geográfica</li>
+      <li>❌ Dados de navegação fora do app</li>
+    </ul>
+    <h2>3. Como Usamos Seus Dados</h2>
+    <ul>
+      <li>Armazenar suas listas e credenciais <strong>localmente</strong> para que o app funcione</li>
+      <li>Sincronizar favoritos e progresso entre seus dispositivos <strong>apenas se você fizer login e ativar a sincronização</strong></li>
+      <li>Buscar metadados (pôsteres, sinopses) do TMDB <strong>apenas se você fornecer uma chave de API</strong></li>
+      <li>Exibir guias de programação (EPG) declarados nas suas listas M3U</li>
+    </ul>
+    <h2>4. Compartilhamento de Dados</h2>
+    <p><strong>Não vendemos, alugamos ou compartilhamos seus dados pessoais com terceiros.</strong></p>
+    <ul>
+      <li>O TMDB recebe apenas consultas de busca de metadados (sem identificação pessoal)</li>
+      <li>O Supabase recebe dados de autenticação e sincronização <strong>apenas se você optar por usar esse recurso</strong></li>
+      <li>Seu broker MQTT recebe comandos de cast <strong>apenas se você configurar e ativar</strong></li>
+    </ul>
+    <h2>5. Armazenamento e Segurança</h2>
+    <ul>
+      <li>Todos os dados sensíveis (senhas, tokens, chaves de API) são <strong>criptografados localmente</strong> via Web Crypto API (AES-GCM) antes de serem salvos no IndexedDB</li>
+      <li>As chaves de criptografia são derivadas de segredos do dispositivo e <strong>nunca saem da TV</strong></li>
+      <li>Você pode apagar todos os dados a qualquer momento desinstalando o app ou usando "Sair" nas configurações</li>
+    </ul>
+    <h2>6. Seus Direitos</h2>
+    <p>Você tem o direito de:</p>
+    <ul>
+      <li><strong>Acessar</strong> quais dados estão armazenados localmente (Configurações → ver fontes/canais)</li>
+      <li><strong>Retificar</strong> credenciais incorretas (reimportar a lista)</li>
+      <li><strong>Apagar</strong> todos os dados (desinstalar app ou "Sair" + limpar dados do navegador nas configurações da TV)</li>
+      <li><strong>Portabilidade:</strong> Exportar suas listas M3U/Xtream (são seus arquivos originais)</li>
+      <li><strong>Opor-se</strong> ao processamento (não usar sincronização/TMDB/MQTT)</li>
+    </ul>
+    <h2>7. Retenção</h2>
+    <p>Dados locais persistem até você removê-los. Dados no Supabase (se usar sincronização) seguem a política de retenção do Supabase (padrão: 30 dias após exclusão da conta).</p>
+    <h2>8. Crianças</h2>
+    <p>O OrunTV não é direcionado a menores de 13 anos. Não coletamos intencionalmente dados de crianças. Se você é pai/responsável e acredita que seu filho nos forneceu dados, entre em contato para remoção.</p>
+    <h2>9. Alterações nesta Política</h2>
+    <p>Publicaremos alterações nesta página com data de atualização. Mudanças materiais serão notificadas no app.</p>
+    <h2>10. Contato</h2>
+    <p>Dúvidas, solicitações de direitos do titular de dados ou relatórios de segurança:</p>
+    <ul>
+      <li><strong>E-mail:</strong> caiquecastaldeli3@gmail.com</li>
+      <li><strong>GitHub Issues:</strong> https://github.com/caiqueDeOliveira-dev/OrunTV/issues</li>
+    </ul>
+    <hr>
+    <p><em>Versão em inglês disponível mediante solicitação.</em></p>
+  </div>
+</body>
+</html>
